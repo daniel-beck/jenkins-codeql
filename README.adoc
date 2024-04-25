@@ -88,7 +88,7 @@ codeql database analyze "$TEMPDIR"/codeql-java-database \
   --format=sarif-latest \
   --output="$TEMPDIR"/result.sarif \
   --download \
-  jenkins-infra/jenkins-codeql \                                                <6>
+  jenkins-infra/jenkins-codeql                                                `# <6>` \
   codeql/java-queries:AlertSuppression.ql \
   codeql/java-queries:AlertSuppressionAnnotations.ql \
   || { echo "Failed to analyze database" ; exit 1 ; }
